@@ -140,7 +140,7 @@
         map.on('click', 'shots-point', (event) => {
         new mapboxgl.Popup()
           .setLngLat(event.features[0].geometry.coordinates)
-          .setHTML(`<strong>Armed:</strong> ${event.features[0].properties.armed}`)
+          .setHTML(`<strong>Armed Status:</strong> ${event.features[0].properties.armed}`)
           .addTo(map);
       });
     </script>
