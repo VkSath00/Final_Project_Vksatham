@@ -9,8 +9,9 @@ The goal of my project is to display the excessive force taken by police officer
 <a href="https://vksath00.github.io/Final_Project_Vksatham/">Shootings by Cops in USA</a>
 
 <h1>Screenshots of the Application </h1>
-![heatmap](https://user-images.githubusercontent.com/49254474/145764283-340b1523-c845-4cf2-89cf-1ef5feaa57fe.JPG)
-![armed](https://user-images.githubusercontent.com/49254474/145764287-f5548d38-89d6-4eeb-9d6d-a72580170b25.JPG)
+
+![heatmap](https://user-images.githubusercontent.com/49254474/145764391-aad91bfb-f39a-45ed-ab99-1dbfcbdd53bb.JPG)
+![armed](https://user-images.githubusercontent.com/49254474/145764406-c9d7ce0f-da5e-4caa-8d1a-fdc541aa8416.JPG)
 
 <h1> Main Functions </h1>
 <p> Utilized mapbox gl js and Web Services like GitHub and basemap which is in use</p>
