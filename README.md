@@ -11,7 +11,8 @@ The goal of my project is to display the excessive force taken by police officer
 <h1>Screenshots of the Application </h1>
 
 ![heatmap](https://user-images.githubusercontent.com/49254474/145764391-aad91bfb-f39a-45ed-ab99-1dbfcbdd53bb.JPG)
-![armed](https://user-images.githubusercontent.com/49254474/145764406-c9d7ce0f-da5e-4caa-8d1a-fdc541aa8416.JPG)
+![armed](https://user-images.githubusercontent.com/49254474/145764759-228398dd-548e-4ffa-9fed-8b6edd8152c0.JPG)
+
 
 <h1> Main Functions </h1>
 <p> Utilized mapbox gl js and Web Services like GitHub and basemap which is in use</p>
