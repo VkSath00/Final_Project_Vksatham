@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Create a heatmap layer</title>
+    <title>Fatal Police Shootings Heatmap</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
@@ -23,30 +23,31 @@
 </head>
 
 <body>
+    
     <div id="map"></div>
 
     <script>
         mapboxgl.accessToken =
-            'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
+            'pk.eyJ1IjoibWFsLXdvb2QiLCJhIjoiY2oyZ2t2em50MDAyMzJ3cnltMDFhb2NzdiJ9.X-D4Wvo5E5QxeP7K_I3O8w';
         const map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/dark-v10',
-            center: [-120, 50],
-            zoom: 2
+            center: [-96, 38.5],
+            zoom: 4
         });
 
         map.on('load', () => {
             // Add a geojson point source.
             // Heatmap layers also work with a vector tile source.
-            map.addSource('earthquakes', {
+            map.addSource('shots', {
                 'type': 'geojson',
                 'data': 'fatal-police-shootings-data.geojson'
             });
 
             map.addLayer({
-                    'id': 'earthquakes-heat',
+                    'id': 'shots-heat',
                     'type': 'heatmap',
-                    'source': 'earthquakes',
+                    'source': 'shots',
                     'maxzoom': 9,
                     'paint': {
                         // Increase the heatmap weight based on frequency and property magnitude
@@ -61,7 +62,7 @@
                             0,
                             1,
                             9,
-                            3
+                            1
                         ],
                         // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
                         // Begin color ramp at 0-stop with a 0-transparancy color
@@ -73,9 +74,9 @@
                             0,
                             'rgba(33,102,172,0)',
                             0.2,
-                            'rgb(103,169,207)',
+                            'rgb(153, 0, 204)',
                             0.4,
-                            'rgb(209,229,240)',
+                            'rgb(153, 0, 204)',
                             0.6,
                             'rgb(253,219,199)',
                             0.8,
@@ -109,18 +110,18 @@
             );
 
             map.addLayer({
-                    'id': 'earthquakes-point',
+                    'id': 'shots-point',
                     'type': 'circle',
-                    'source': 'earthquakes',
+                    'source': 'shots',
                     'minzoom': 7,
                     'paint': {
                         // Size circle radius by earthquake magnitude and zoom level
                         'circle-radius': 3,
                         
                         // Color circle by earthquake magnitude
-                        'circle-color': 'rgb(178,24,43)',
-                        'circle-stroke-color': 'white',
-                        'circle-stroke-width': 1,
+                        'circle-color': 'rgb(153, 0, 204)',
+                        'circle-stroke-color': 'purple',
+                        'circle-stroke-width': 0.1,
                         // Transition from heatmap to circle layer by zoom level
                         'circle-opacity': [
                             'interpolate',
@@ -136,8 +137,14 @@
                 'waterway-label'
             );
         });
+        map.on('click', 'shots-point', (event) => {
+        new mapboxgl.Popup()
+          .setLngLat(event.features[0].geometry.coordinates)
+          .setHTML(`<strong>Armed:</strong> ${event.features[0].properties.armed}`)
+          .addTo(map);
+      });
     </script>
-
+    
 </body>
 
 </html>
