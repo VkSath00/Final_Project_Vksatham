@@ -17,5 +17,10 @@ The goal of my project is to display the excessive force taken by police officer
 <p> Utilized mapbox gl js and Web Services like GitHub and basemap which is in use</p>
 
 <h1> Data Source </h1>
-<p> The data source that was utilized in the creation of this map was from the Washington Post with an open source database that included the instanes of shootings in the United States since the beginning of 2015</p>
-<a href="https://www.washingtonpost.com/graphics/investigations/police-shootings-database/">Data Source</a>
+<p> The data source that was utilized in the creation of this map was from the Washington Post with an open source database that included the instanes of shootings in the United States since the beginning of 2015. Here is the <a href="https://www.washingtonpost.com/graphics/investigations/police-shootings-database/">Data Source</a>. </p>
+
+<h1> Additional Information </h1>
+<p> The template that was utilized in the creation of this project was from module 7; specifically the heatmap. The link to it can be found <a href="https://github.com/jakobzhao/geog495/blob/main/modules/module07/heatmap.html">here</a>. </p></p>
+
+<h1> Acknowledgements </h1>
+<p> I'd like to thank Professor Zhao for an informative and productive quarter. While the class was a grind, I was able to pick some skills up out of it and I appreciate that.</p>
